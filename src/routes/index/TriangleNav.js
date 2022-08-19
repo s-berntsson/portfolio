@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import triangle from "../assets/triangle.svg"
+import triangle from "./triangle.svg"
 
 const TriangleNav = () => {
     return (

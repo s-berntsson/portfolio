@@ -6,7 +6,8 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import TriangleNav from './routes/TriangleNav';
+import TriangleNav from './routes/index/TriangleNav';
+import ArtGallery from './routes/art-gallery/ArtGallery';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -20,9 +21,9 @@ root.render(
         <Routes>
           <Route path="/" element={ <App /> }>
             <Route index element={ <TriangleNav /> } />
-            <Route path="about" element={<h1>ABOUT</h1> } />
-            <Route path="art-gallery" element={<h1>ART GALLERY</h1> } />
-            <Route path="projects" element={<h1>PROJECTS</h1> } />
+            <Route path="about" element={<h1>ABOUT</h1> } />       {/* Create component! */}
+            <Route path="art-gallery" element={<ArtGallery /> } />
+            <Route path="projects" element={<h1>PROJECTS</h1> } />  {/* Create component! */}
           </Route>
         </Routes>
       </BrowserRouter>

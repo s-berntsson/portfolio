@@ -1,13 +1,15 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import './App.css';
-import Trianglenav from './routes/TriangleNav';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">   {/* avoid div? */}
       <nav>
-        <Link to="/">Home</Link>
+        <NavLink to="/">                  {/* use isActive thingy to hide when home */}
+          <img src="" alt="triangle" />   {/* probably replace this whole thang with component */}
+        </NavLink>
+        <img src="" alt="star" />  {/* probably replace with component */}
       </nav>
       <Outlet />      
     </div>

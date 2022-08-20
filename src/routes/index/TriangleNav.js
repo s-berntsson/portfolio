@@ -8,7 +8,7 @@ const TriangleNav = () => {
         <nav className={styles.gridContainer}>
             <Link className={styles.gridItem} id={styles.about} to="/about"><h4>ABOUT</h4></Link>
             <section className={styles.gridItem} id={styles.triangle}>
-                <img className={styles.triangleSvg} src={triangle} alt="triangle" />
+                {/*<img className={styles.triangleSvg} src={triangle} alt="triangle" />*/}
                 <h2 className={styles.name}>
                     SUSANNA<br/>
                     &nbsp;&nbsp;BERNT<br/>

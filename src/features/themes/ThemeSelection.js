@@ -2,12 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import { selectCurrentTheme, selectAllThemeData, selectThemeKeys } from "./themesSlice";
-
 import styles from "./ThemeSelection.module.css";
-
 import ColorCircle from "./ColorCircle";
-
-
 
 const ThemeSelection = () => {
 

@@ -3,22 +3,18 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeTheme } from "./themesSlice";
 
 const ColorCircle = ({color, className, themeData, currentTheme}) => {
-
   const dispatch = useDispatch()
+  let stroke = themeData.dark
+  let glow = "none"
 
-/*
-  //local state
-  const decideStroke = () => {
-    if (currentTheme.toString() !== color){
-      return themeData.dark
+  const decideStyling = () => {
+    if (currentTheme === color) {
+      stroke = themeData.light
+      glow = `drop-shadow(0 0 0.2rem ${themeData.glow})`
     }
-    return themeData.light
   }
 
-  const [stroke, setStroke] = useState(themeData.dark)
-
-  */
-
+  decideStyling()
 
   //handle click
   const handleClick = () => {
@@ -27,8 +23,8 @@ const ColorCircle = ({color, className, themeData, currentTheme}) => {
 
 
   return (
-    <svg onClick={handleClick} className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 92 92">
-      <circle cx="46" cy="46" r="44.5" stroke={themeData.dark} strokeWidth="3" />
+    <svg onClick={handleClick} className={className} xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100" viewBox="-9 -9 110 110">
+      <circle cx="46" cy="46" r="44.5" stroke={stroke} style={{filter: glow}} strokeWidth="3" />
     </svg>
   )
 }

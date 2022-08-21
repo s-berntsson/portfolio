@@ -15,22 +15,13 @@ const ThemeSelection = () => {
     const themes = useSelector(selectAllThemeData)
     const themeKeys = useSelector(selectThemeKeys)
 
-    const devColor = "red"
-
-    function renderCircles() {themeKeys.map(key => {
-            return (
-                <ColorCircle color={key} themeData={themes[key]} />
-            )
+    const renderedCircles = themeKeys.map(key => {
+        return(<ColorCircle key={key}color={key} className={styles.colorCircle} themeData={themes[key]} currentTheme={currentTheme} />)
         })
-    }
-
-    const handleClick = () => {
-        console.log(themeKeys)
-    }
 
     return (
-        <div onClick={handleClick}>
-            <ColorCircle color={devColor} className={styles.colorCircle} themeData={themes[devColor]} currentTheme={currentTheme} />
+        <div>
+            {renderedCircles}
         </div>
     )
 }

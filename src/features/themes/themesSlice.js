@@ -46,7 +46,9 @@ export const selectThemeKeys = state => Object.keys(state.themes.data)
 export const selectAllThemeData = state => state.themes.data
 
 export const selectCurrentThemeData = (state) => { 
-    selectAllThemeData(state).selectCurrentTheme(state) 
+    const current = selectCurrentTheme(state)
+    const data = selectAllThemeData(state)
+    return data[current]
 }
 
 export default themesSlice.reducer

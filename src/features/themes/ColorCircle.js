@@ -10,7 +10,7 @@ const ColorCircle = ({color, className, themeData, currentTheme}) => {
   const decideStyling = () => {
     if (currentTheme === color) {
       stroke = themeData.light
-      glow = `drop-shadow(0 0 0.2rem ${themeData.glow})`
+      glow = `drop-shadow(0 0 0.2rem ${themeData.glow})`  //phrase same as in trianglenav?
     }
   }
 

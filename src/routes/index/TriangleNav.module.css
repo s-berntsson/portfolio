@@ -1,8 +1,9 @@
 .gridContainer {
     width: 80%;
+    height: auto;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: auto;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
     " . about . "
     " . triangle-text . "
@@ -19,20 +20,20 @@
 
 #about {
     grid-area: about;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 #artGallery {
     grid-area: art-gallery;
     justify-self: end;
     text-align: right;
-    padding-right: 0.5rem;
+    padding-right: 1rem;
 }
 
 #projects {
     grid-area: projects;
     justify-self: start;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
 }
 
 #triangleText {
@@ -43,7 +44,6 @@
 
 .triangle {
     width: 100%;
-    margin: 0 auto;
 }
 
 .text {
@@ -51,5 +51,4 @@
     position: absolute;
     left: -5%;
 }
-
 

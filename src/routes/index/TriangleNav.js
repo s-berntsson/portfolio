@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom"
 import triangle from "./triangle.svg"
 import text from "./text.svg"
 import styles from './TriangleNav.module.css'
+import { useSelector } from "react-redux";
+import { selectCurrentThemeData } from "../../features/themes/themesSlice";
+import HoverRouterLink from "../../features/themes/HoverLink";
 
 const TriangleNav = () => {
+    const themeData = useSelector(selectCurrentThemeData)
+    const { glow } = themeData
+
+    const colorGlow = {filter: `drop-shadow(0 0 .2rem ${glow})`}
+    const whiteGlow = {filter: `drop-shadow(0 0 .2rem #fff)`}
+
+
     return (
         <nav className={styles.gridContainer}>
-            <Link className={styles.gridItem} id={styles.about} to="/about"><h4>ABOUT</h4></Link>
+            <HoverRouterLink pathText="about" id={styles.about} className={styles.gridItem} themeData={themeData} colorGlow={colorGlow}/>
             <section className={styles.gridItem} id={styles.triangleText}>
-                <img className={styles.triangle} src={triangle} alt="triangle" />
-                <img className={styles.text} src={text} alt="Susanna Berntsson Portfolio" />
+                <img className={styles.triangle} src={triangle} alt="triangle" style={colorGlow}/>
+                <img className={styles.text} src={text} style={whiteGlow} alt="Susanna Berntsson Portfolio" />
             </section>
-            <Link className={styles.gridItem} id={styles.artGallery} to="/art-gallery"><h4>ART<br/>GALLERY</h4></Link>
-            <Link className={styles.gridItem} id={styles.projects} to="/projects"><h4>PROJECTS</h4></Link>
+            {/* Replace with HoverRouterLink after completing template */}
+            <HoverRouterLink pathText="art-gallery" id={styles.artGallery} className={styles.gridItem} themeData={themeData} colorGlow={colorGlow}/>
+            <HoverRouterLink pathText="projects" id={styles.projects} className={styles.gridItem} themeData={themeData} colorGlow={colorGlow}/>
         </nav>
     )
 }

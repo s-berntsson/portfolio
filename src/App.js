@@ -5,7 +5,7 @@ import ThemeSelection from './features/themes/ThemeSelection';
 
 function App() {
   return (
-    <div className="App">   {/* avoid div? */}
+    <div className="App">  
       <nav className="navbar">
         <NavLink to="/" className="home-container">                  {/* use isActive thingy to hide when home */}
           <h4 className="home-text" >HOME</h4>

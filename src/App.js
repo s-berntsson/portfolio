@@ -13,7 +13,7 @@ function App() {
         </NavLink>
         <ThemeSelection />
       </nav>
-      <Outlet />      
+      <Outlet className="outlet" />      
     </div>
   );
 }

@@ -9,7 +9,7 @@ import HoverRouterLink from "../../features/themes/HoverLink";
 
 const TriangleNav = () => {
     const themeData = useSelector(selectCurrentThemeData)
-    const { glow } = themeData
+    const { glow, light, dark } = themeData
 
     const colorGlow = {filter: `drop-shadow(0 0 .2rem ${glow})`}
     const whiteGlow = {filter: `drop-shadow(0 0 .2rem #fff)`}

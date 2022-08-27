@@ -1,13 +1,13 @@
 .gridContainer {
     width: 80%;
+    max-width: fit-content;
     height: auto;
     display: grid;
-    grid-template-columns: 20% auto 20%;
-    grid-template-rows: auto auto auto;
     grid-template-areas: 
     " . about . "
     " . triangle-text . "
     " art-gallery . projects ";
+    grid-gap: 0;
     margin: 2rem;
 }
 

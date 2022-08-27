@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HoverRouterLink = ({pathText, themeData, colorGlow, className, id}) => {
 
@@ -19,9 +19,9 @@ const HoverRouterLink = ({pathText, themeData, colorGlow, className, id}) => {
 
     // Element
     return (
-        <Link to={`/${pathText}`} className={className} id={id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyle}>
+        <NavLink to={`/${pathText}`} className={className} id={id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyle}>
             <h4 dangerouslySetInnerHTML={{__html: linkText}}></h4>
-        </Link>
+        </NavLink>
     )
 }
 

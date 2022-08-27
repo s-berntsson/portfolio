@@ -2,5 +2,33 @@
   display: flex;  
   flex-direction: column;
   align-items: center;
+  height: 85vh;
+  padding-top: 15vh;
 }
 
+a {
+  text-decoration: none;
+}
+
+.home-triangle {
+  position: absolute;
+  top: .4rem;
+  left: 1.4rem;
+  width: 5rem;
+}
+
+.home-text {
+  padding: 1rem;
+  width: fit-content;
+}
+
+.home-container {
+  max-width: fit-content;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 1rem;
+}

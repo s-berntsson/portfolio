@@ -41,7 +41,7 @@ export const { changeTheme } = themesSlice.actions
 
 export const selectCurrentTheme = state => state.themes.current
 
-export const selectThemeKeys = state => Object.keys(state.themes.data)
+export const selectThemeKeys = state => (Object.keys(state.themes.data))
 
 export const selectAllThemeData = state => state.themes.data
 

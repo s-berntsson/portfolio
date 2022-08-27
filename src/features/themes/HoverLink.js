@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { useCurrentThemeData, useGlowEffect } from "./themeHooks";
 
-const HoverRouterLink = ({pathText, themeData, colorGlow, className, id}) => {
 
+const HoverLink = ({pathText, className, id}) => {
+    // theme styling
+    const {light, dark} = useCurrentThemeData()
+    const colorGlow = useGlowEffect("glow")
+    
     // Handle hover effect
     const [hover, setHover] = useState(false)
 
@@ -11,18 +17,18 @@ const HoverRouterLink = ({pathText, themeData, colorGlow, className, id}) => {
     const handleMouseLeave = () => { setHover(false) }
 
     const linkStyle = {
-        color: hover ? themeData.light : themeData.dark,
+        color: hover ? light : dark,
         filter: hover ? colorGlow : null
     }
 
+    // adapt multiple word paths into display text
     const linkText = pathText.toUpperCase().replace('-', '<br/>')
 
-    // Element
     return (
-        <NavLink to={`/${pathText}`} className={className} id={id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyle}>
+        <Link to={`/${pathText}`} className={className} id={id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyle}>
             <h4 dangerouslySetInnerHTML={{__html: linkText}}></h4>
-        </NavLink>
+        </Link>
     )
 }
 
-export default HoverRouterLink
+export default HoverLink

@@ -7,13 +7,11 @@ import ColorCircle from "./ColorCircle";
 
 const ThemeSelection = () => {
 
-    const currentTheme = useSelector(selectCurrentTheme)
-    const themes = useSelector(selectAllThemeData)
     const themeKeys = useSelector(selectThemeKeys)
     const [hidden, setHidden] = useState(true)
 
     const renderedCircles = themeKeys.map(key => {
-        return(<ColorCircle key={key}color={key} className={styles.colorCircle} themeData={themes[key]} currentTheme={currentTheme} />)
+        return(<ColorCircle color={key} className={styles.colorCircle} key={key}/>)
         })
 
 

@@ -3,7 +3,6 @@ import { selectAllThemeData, selectCurrentTheme, selectCurrentThemeData } from "
 
 export const useGlowEffect = (string) => {
     let color = useSelector(selectCurrentThemeData)[string] || string
-    console.log(color)
     return {filter: `drop-shadow(0 0 .2rem ${color}`}
 }
 

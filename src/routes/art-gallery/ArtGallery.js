@@ -17,7 +17,7 @@ const ArtGallery = () => {
     const photos = useSelector(selectPhotoData)
     const ids = useSelector(selectPhotoIds)
 
-    const renderedPhotos = ids.map(id => (<div className={styles.gridItem} style={{ backgroundImage: `url(${photos[id].imgUrl})` }} key={id} />))
+    const renderedPhotos = ids.map(id => (<div className={styles.gridItem} style={{ backgroundImage: `url(${photos[id].url})` }} key={id} />))
 
     return (
         <div className={styles.artGallery}>

@@ -11,8 +11,7 @@ const initialState = {
 export const loadPhotos = createAsyncThunk(
     'photos/fetchPhotos',
     async () => {
-        const response = await fetchPhotos()
-        return response
+        return await fetchPhotos();
     }
 )
 

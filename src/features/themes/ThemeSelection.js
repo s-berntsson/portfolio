@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
-import { selectCurrentTheme, selectAllThemeData, selectThemeKeys } from "./themesSlice";
+import { selectThemeKeys } from "./themesSlice";
 import styles from "./ThemeSelection.module.css";
 import ColorCircle from "./ColorCircle";
-    import lampSvg from "./lamp.svg"
-import { useGlowEffect } from "./themeHooks";
-
+import lampSvg from "./lamp.svg";
 
 const ThemeSelection = () => {
     const themeKeys = useSelector(selectThemeKeys)
@@ -23,7 +21,7 @@ const ThemeSelection = () => {
 
     return (
         <div className={`${styles.container} ${styles.hidden}`} id="container" >
-            <img className={styles.lampSvg} src={lampSvg} onClick={handleClick} />
+            <img className={styles.lampSvg} src={lampSvg} onClick={handleClick} alt='lamp symbol' />
             {renderedCircles}
         </div>
     )

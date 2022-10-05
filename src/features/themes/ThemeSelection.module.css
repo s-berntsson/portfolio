@@ -8,17 +8,24 @@ padding: .5rem;
     position: absolute;
     right: 0;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     transition: right 1s;
     z-index: 1;
+    width: 17rem;
 }
 
 .container.hidden{
-    right: -5rem;
+    right: -13rem;
     overflow-x: hidden;
 }
 
-input {
-    background-color: transparent;
-    border: none;
-    color: white;
+.lampSvg {
+    width: 3.6rem;
+    height: auto;
+    padding: .5rem .5rem 0 0;
+}
+
+.lampSvg:hover {
+    filter: drop-shadow(0 0 .1rem white);
 }

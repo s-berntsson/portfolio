@@ -49,4 +49,4 @@ const fetchPhotos = async () => {
 
 }
 
-export default fetchPhotos
+export default fetchPhotos;

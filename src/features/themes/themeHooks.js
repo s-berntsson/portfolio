@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import { selectAllThemeData, selectCurrentTheme, selectCurrentThemeData } from "./themesSlice";
 
 export const useGlowEffect = (string) => {
-    const color = useSelector(selectCurrentThemeData)[string] || string
-
+    let color = useSelector(selectCurrentThemeData)[string] || string
+    console.log(color)
     return {filter: `drop-shadow(0 0 .2rem ${color}`}
 }
 

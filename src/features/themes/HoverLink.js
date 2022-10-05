@@ -7,7 +7,7 @@ import { useCurrentThemeData, useGlowEffect } from "./themeHooks";
 const HoverLink = ({pathText, className, id}) => {
     // theme styling
     const {light, dark} = useCurrentThemeData()
-    const colorGlow = useGlowEffect("glow")
+    const glowEffect = useGlowEffect("glow")
     
     // Handle hover effect
     const [hover, setHover] = useState(false)
@@ -16,10 +16,11 @@ const HoverLink = ({pathText, className, id}) => {
 
     const handleMouseLeave = () => { setHover(false) }
 
-    const linkStyle = {
-        color: hover ? light : dark,
-        filter: hover ? colorGlow : null
-    }
+    const linkStyle = glowEffect
+
+    linkStyle.color = hover ? light : dark
+    linkStyle.filter = hover ? linkStyle.filter : null
+    
 
     // adapt multiple word paths into display text
     const linkText = pathText.toUpperCase().replace('-', '<br/>')

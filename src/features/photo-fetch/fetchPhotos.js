@@ -40,8 +40,8 @@ const extractPostData = (input) => {
 }
 
 const fetchPhotos = async () => {
-    const response = await fetch(apiUrl)
-    const data = await response.json()
+    const response = await fetch(apiUrl);
+    const data = await response.json();
 
     const extractedData = extractPostData(data)
 

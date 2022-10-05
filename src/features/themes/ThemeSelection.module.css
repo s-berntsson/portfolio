@@ -13,6 +13,12 @@ padding: .5rem;
 }
 
 .container.hidden{
-    right: -16rem;
+    right: -5rem;
     overflow-x: hidden;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    color: white;
 }

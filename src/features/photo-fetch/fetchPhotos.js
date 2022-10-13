@@ -1,4 +1,6 @@
-const apiUrl = `https://api.tumblr.com/v2/blog/sbportfolio/posts/photo?api_key=${process.env.REACT_APP_API_KEY}&npf=true&limit=30`
+//const key = process.env.REACT_APP_API_KEY;
+const key = 'key';
+const apiUrl = `https://api.tumblr.com/v2/blog/sbportfolio/posts/photo?api_key=${key}&npf=true&limit=30`;
 
 const extractPostData = (posts) => {
 

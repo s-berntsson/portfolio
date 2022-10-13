@@ -20,6 +20,13 @@
     background-size: cover;
   }
 
+  .loading {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex; 
+    justify-content: center;
+  }
+
   h2 {
     padding: .5rem 0;
   }

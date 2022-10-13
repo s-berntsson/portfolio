@@ -21,9 +21,9 @@ root.render(
         <Routes>
           <Route path="/" element={ <App /> }>
             <Route index element={ <TriangleNav /> } />
-            <Route path="about" element={<h1>ABOUT</h1> } />       {/* Create component! */}
+            <Route path="about" element={<h2 style={{backgroundColor: 'orange', fontWeight: 'bold'}}>{'[ UNDER CONSTRUCTION ]'}</h2> } />       {/* Create component! */}
             <Route path="art-gallery" element={<ArtGallery /> } />
-            <Route path="projects" element={<h1>PROJECTS</h1> } />  {/* Create component! */}
+            <Route path="projects" element={<h2 style={{backgroundColor: 'orange', fontWeight: 'bold'}}>{'[ UNDER CONSTRUCTION ]'}</h2>} />  {/* Create component! */}
           </Route>
         </Routes>
       </BrowserRouter>

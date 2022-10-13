@@ -40,10 +40,12 @@ export const photosSlice = createSlice({
     }
 })
 
-export const { clearPhotos } = photosSlice.actions
+export const { clearPhotos } = photosSlice.actions;
 
-export const selectPhotoData = state => state.photos.entities
+export const selectPhotoData = state => state.photos.entities;
 
-export const selectPhotoIds = state => state.photos.ids
+export const selectPhotoIds = state => state.photos.ids;
 
-export default photosSlice.reducer
+export const selectPhotosStatus = state => state.photos.status;
+
+export default photosSlice.reducer;

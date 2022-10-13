@@ -5,6 +5,8 @@ padding: .5rem;
 }
 
 .container {
+    width: 17rem;
+    padding-right: 1rem;
     position: absolute;
     right: 0;
     display: flex;
@@ -12,18 +14,16 @@ padding: .5rem;
     justify-content: space-between;
     transition: right 1s;
     z-index: 1;
-    width: 17rem;
 }
 
 .container.hidden{
-    right: -13rem;
-    overflow-x: hidden;
+    right: -13.2rem;
 }
 
 .lampSvg {
     width: 3.6rem;
     height: auto;
-    padding: .5rem .5rem 0 0;
+    padding: .5rem .8rem 0 0;
 }
 
 .lampSvg:hover {
